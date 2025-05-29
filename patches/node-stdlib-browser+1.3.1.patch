@@ -1,0 +1,14 @@
+diff --git a/node_modules/node-stdlib-browser/helpers/esbuild/shim.js b/node_modules/node-stdlib-browser/helpers/esbuild/shim.js
+index ccdc55d..22783bc 100644
+--- a/node_modules/node-stdlib-browser/helpers/esbuild/shim.js
++++ b/node_modules/node-stdlib-browser/helpers/esbuild/shim.js
+@@ -18,7 +18,8 @@ var _globalThis = function (Object) {
+     return _global;
+   }
+ }(Object);
+-import { Buffer } from 'buffer';
++import buffer from 'buffer';
++const { Buffer } = buffer;
+ import process from 'process';
+ var _global = _globalThis;
+ export { Buffer, process, _global as global };
